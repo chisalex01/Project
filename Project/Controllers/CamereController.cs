@@ -23,14 +23,14 @@ namespace Project.Controllers
 
         // GET: api/Camere
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Camere>>> GetCamere()
+        public async Task<ActionResult<IEnumerable<Camera>>> GetCamere()
         {
             return await _context.Camere.ToListAsync();
         }
 
         // GET: api/Camere/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Camere>> GetCamere(Guid id)
+        public async Task<ActionResult<Camera>> GetCamere(Guid id)
         {
             var camere = await _context.Camere.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace Project.Controllers
         // PUT: api/Camere/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCamere(Guid id, Camere camere)
+        public async Task<IActionResult> PutCamere(Guid id, Camera camere)
         {
             if (id != camere.ID)
             {
@@ -76,7 +76,7 @@ namespace Project.Controllers
         // POST: api/Camere
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Camere>> PostCamere(Camere camere)
+        public async Task<ActionResult<Camera>> PostCamere(Camera camere)
         {
             _context.Camere.Add(camere);
             await _context.SaveChangesAsync();

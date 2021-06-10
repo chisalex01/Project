@@ -17,7 +17,7 @@ export class AngajatAddComponent {
     private router: Router) { }
 
   public saveAngajat() {
-    this.http.post(this.baseUrl + 'api/', this.angajat).subscribe(result => {
+    this.http.post(this.baseUrl + 'api/angajati', this.angajat).subscribe(result => {
       this.router.navigateByUrl("/angajati");
     }, error => console.error(error))
   }

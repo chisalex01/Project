@@ -1,0 +1,38 @@
+<h1 id="tableLabel">Camere</h1>
+
+<p *ngIf="!camere"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="camere">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tip</th>
+      <th>Pret</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let camera of camere">
+      <td>{{ camera.id }}</td>
+      <td>{{ camera.tip }}</td>
+      <td>{{ camera.pret }}</td>
+      <td>
+        <a href="/camera-update?id={{camera.id}}">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </a>
+      </td>
+      <td>
+        <button (click)="deleteCamera(camera)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button mat-fab color="primary" [routerLink]="['/camera-add']">
+  <mat-icon>add</mat-icon>
+</button>

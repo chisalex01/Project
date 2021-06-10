@@ -23,14 +23,14 @@ namespace Project.Controllers
 
         // GET: api/Clienti
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Clienti>>> GetClienti()
+        public async Task<ActionResult<IEnumerable<Client>>> GetClienti()
         {
             return await _context.Clienti.ToListAsync();
         }
 
         // GET: api/Clienti/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Clienti>> GetClienti(Guid id)
+        public async Task<ActionResult<Client>> GetClienti(Guid id)
         {
             var clienti = await _context.Clienti.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace Project.Controllers
         // PUT: api/Clienti/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutClienti(Guid id, Clienti clienti)
+        public async Task<IActionResult> PutClienti(Guid id, Client clienti)
         {
             if (id != clienti.ID)
             {
@@ -76,7 +76,7 @@ namespace Project.Controllers
         // POST: api/Clienti
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Clienti>> PostClienti(Clienti clienti)
+        public async Task<ActionResult<Client>> PostClienti(Client clienti)
         {
             _context.Clienti.Add(clienti);
             await _context.SaveChangesAsync();

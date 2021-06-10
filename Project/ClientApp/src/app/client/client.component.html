@@ -1,0 +1,43 @@
+<h1 id="tableLabel">Clienti</h1>
+
+<p *ngIf="!clienti"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="clienti">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume</th>
+      <th>Prenume</th>
+      <th>Telefon</th>
+      <th>CNP</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clienti">
+      <td>{{ client.id }}</td>
+      <td>{{ client.nume }}</td>
+      <td>{{ client.prenume }}</td>
+      <td>{{ client.telefon }}</td>
+      <td>{{ client.cnp }}</td>
+      <td>
+        <a href="/client-update?id={{client.id}}">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </a>
+      </td>
+      <td>
+        <button (click)="deleteClient(client)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button mat-fab color="primary" [routerLink]="['/client-add']">
+  <mat-icon>add</mat-icon>
+</button>
+

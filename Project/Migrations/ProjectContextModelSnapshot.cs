@@ -19,7 +19,7 @@ namespace Project.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Project.Models.Angajati", b =>
+            modelBuilder.Entity("Project.Models.Angajat", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
@@ -42,17 +42,14 @@ namespace Project.Migrations
                     b.ToTable("Angajati");
                 });
 
-            modelBuilder.Entity("Project.Models.Camere", b =>
+            modelBuilder.Entity("Project.Models.Camera", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Pret")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Pret")
+                        .HasColumnType("float");
 
                     b.Property<string>("Tip")
                         .HasColumnType("nvarchar(max)");
@@ -62,7 +59,7 @@ namespace Project.Migrations
                     b.ToTable("Camere");
                 });
 
-            modelBuilder.Entity("Project.Models.Clienti", b =>
+            modelBuilder.Entity("Project.Models.Client", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()

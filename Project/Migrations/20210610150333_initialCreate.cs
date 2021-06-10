@@ -28,8 +28,7 @@ namespace Project.Migrations
                 {
                     ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Tip = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Pret = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Pret = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

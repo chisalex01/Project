@@ -23,14 +23,14 @@ namespace Project.Controllers
 
         // GET: api/Angajati
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Angajati>>> GetAngajati()
+        public async Task<ActionResult<IEnumerable<Angajat>>> GetAngajati()
         {
             return await _context.Angajati.ToListAsync();
         }
 
         // GET: api/Angajati/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Angajati>> GetAngajati(Guid id)
+        public async Task<ActionResult<Angajat>> GetAngajati(Guid id)
         {
             var angajati = await _context.Angajati.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace Project.Controllers
         // PUT: api/Angajati/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAngajati(Guid id, Angajati angajati)
+        public async Task<IActionResult> PutAngajati(Guid id, Angajat angajati)
         {
             if (id != angajati.ID)
             {
@@ -76,7 +76,7 @@ namespace Project.Controllers
         // POST: api/Angajati
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Angajati>> PostAngajati(Angajati angajati)
+        public async Task<ActionResult<Angajat>> PostAngajati(Angajat angajati)
         {
             _context.Angajati.Add(angajati);
             await _context.SaveChangesAsync();

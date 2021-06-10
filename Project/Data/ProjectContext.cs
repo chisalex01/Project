@@ -14,10 +14,10 @@ namespace Project.Data
         {
         }
 
-        public DbSet<Project.Models.Angajati> Angajati { get; set; }
+        public DbSet<Project.Models.Angajat> Angajati { get; set; }
 
-        public DbSet<Project.Models.Camere> Camere { get; set; }
+        public DbSet<Project.Models.Camera> Camere { get; set; }
 
-        public DbSet<Project.Models.Clienti> Clienti { get; set; }
+        public DbSet<Project.Models.Client> Clienti { get; set; }
     }
 }

@@ -1,0 +1,30 @@
+<h1 id="tableLabel">Edit angajat</h1>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Nume</mat-label>
+  <input [(ngModel)]="angajat.nume" matInput placeholder="Ex. Chis">
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>Prenume</mat-label>
+  <input [(ngModel)]="angajat.prenume" matInput placeholder="Ex. Alexandru">
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>Functie</mat-label>
+  <input [(ngModel)]="angajat.functie" matInput placeholder="Ex. 0712312***">
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>Telefon</mat-label>
+  <input [(ngModel)]="angajat.telefon" matInput placeholder="Ex. Director">
+</mat-form-field>
+
+<br />
+
+<button mat-fab color="primary" (click)="updateAngajat()">
+  <mat-icon>done</mat-icon>
+</button>

@@ -5,17 +5,16 @@ using System.Threading.Tasks;
 
 namespace Project.Models
 {
-    public class Angajati
+    public class Client
     {
-
         public Guid ID { get; set; }
 
         public string Nume { get; set; }
 
         public string Prenume { get; set; }
 
-        public string Functie { get; set; }
-
         public string Telefon { get; set; }
+
+        public string Cnp { get; set; }
     }
 }

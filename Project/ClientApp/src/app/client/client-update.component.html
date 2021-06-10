@@ -1,0 +1,30 @@
+<h1 id="tableLabel">Edit client</h1>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Nume</mat-label>
+  <input [(ngModel)]="client.nume" matInput placeholder="Ex. Chis">
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>Preume</mat-label>
+  <input [(ngModel)]="client.prenume" matInput placeholder="Ex. Alexandru">
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>Telefon</mat-label>
+  <input [(ngModel)]="client.telefon" matInput placeholder="Ex. 0712312***">
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>CNP</mat-label>
+  <input [(ngModel)]="client.cnp" matInput placeholder="Ex. 20230232323***">
+</mat-form-field>
+
+<br />
+
+<button mat-fab color="primary" (click)="updateClient()">
+  <mat-icon>done</mat-icon>
+</button>

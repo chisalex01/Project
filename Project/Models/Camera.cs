@@ -5,14 +5,12 @@ using System.Threading.Tasks;
 
 namespace Project.Models
 {
-    public class Camere
+    public class Camera
     {
         public Guid ID { get; set; }
 
         public string Tip { get; set; }
 
-        public string Pret { get; set; }
-
-        public string Status { get; set; }
+        public double Pret { get; set; }
     }
 }
