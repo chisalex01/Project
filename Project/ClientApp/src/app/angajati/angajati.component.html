@@ -1,0 +1,30 @@
+<h1 id="tableLabel">Angajati</h1>
+
+<button class="btn btn-primary" [routerLink]="['/angajat-add']">Adauga angajat</button>
+
+<p *ngIf="!angajati"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="angajati">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume</th>
+      <th>Prenume</th>
+      <th>Functie</th>
+      <th>Telefon</th>
+      <th>Salariu</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let angajat of angajati">
+      <td>{{ angajat.id }}</td>
+      <td>{{ angajat.nume }}</td>
+      <td>{{ angajat.prenume }}</td>
+      <td>{{ angajat.functie }}</td>
+      <td>{{ angajat.telefon }}</td>
+      <td>{{ angajat.salariu }}</td>
+      <td><button class="btn btn-primary" (click)="deleteAngajat(angajat)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
